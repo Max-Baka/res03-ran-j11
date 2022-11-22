@@ -27,13 +27,15 @@ form.addEventListener("submit",function(e){
     }
     else
     {
+    
     let imputError = document.createElement("p");
     let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
     
-        imputError.innerHTML = "Veuillez choisir un nom d'utilisateur";
+        imputError.innerHTML = "Veuillez choisir une adresse valide";
         imputError.classList.add("erreur");
         emailImput.classList.add("erreur");
         fieldset.appendChild(imputError);
         
-    }
+        }
+    
 });
