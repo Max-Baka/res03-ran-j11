@@ -12,7 +12,28 @@ form.addEventListener("submit",function(e){
     {
     let imputError = document.createElement("p");
     let fieldset = document.querySelector("form:first-of-type fieldset:first-of-type");
-        imputError.innerHTML = "Veuilez choisir un nom d'utilisateur";
-        imputError.classList.add(imputError);
+        imputError.innerHTML = "Veuillez choisir un nom d'utilisateur";
+        imputError.classList.add("erreur");
+        usernameImput.classList.add("erreur");
+        fieldset.appendChild(imputError);}
+        
+        
+        
+    let emailImput = document.querySelector("#email");
+    
+    if(emailImput.value !== "")
+    {
+        e.target.submit();
+    }
+    else
+    {
+    let imputError = document.createElement("p");
+    let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
+    
+        imputError.innerHTML = "Veuillez choisir un nom d'utilisateur";
+        imputError.classList.add("erreur");
+        emailImput.classList.add("erreur");
+        fieldset.appendChild(imputError);
+        
     }
 });
